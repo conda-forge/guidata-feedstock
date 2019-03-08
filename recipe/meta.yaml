@@ -9,10 +9,11 @@ source:
   url: https://github.com/PierreRaybaut/guidata/archive/v{{ version }}.tar.gz
   sha256: 2ffc8e6dd27a57c6ec0e260986368beeddbd2fa5588f5200614b307b27a39e37
   patches:
-   - removed_entry_points.patch
+    - removed_entry_points.patch
+    - qt_import.patch
 
 build:
-  number: 3
+  number: 4
   script: python -m pip install --no-deps --ignore-installed .
   noarch: python
 
