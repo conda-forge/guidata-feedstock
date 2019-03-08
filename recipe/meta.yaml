@@ -11,7 +11,7 @@ source:
   patches:
     - removed_entry_points.patch
     # The correct imports should come from QtGui
-#    - qt_import.patch
+    - qt_import.patch
 
 build:
   number: 4
@@ -20,7 +20,6 @@ build:
 
 requirements:
   build:
-    - python
     - pip
     - pyqt  {{ pyqt_version }}
   run:
