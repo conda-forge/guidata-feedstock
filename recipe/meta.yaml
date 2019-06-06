@@ -13,17 +13,17 @@ source:
 
 build:
   number: 4
-  script: python -m pip install --no-deps --ignore-installed .
   noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - python
     - pip
-    - pyqt  {{ pyqt_version }}
+    - pyqt
   run:
     - python
-    - pyqt  {{ pyqt_version }}
+    - pyqt
 
 test:
   imports:
