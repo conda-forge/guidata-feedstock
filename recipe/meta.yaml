@@ -12,18 +12,18 @@ source:
    - removed_entry_points.patch
 
 build:
-  number: 3
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 4
   noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - python
     - pip
-    - pyqt  {{ pyqt_version }}
+    - pyqt
   run:
     - python
-    - pyqt  {{ pyqt_version }}
+    - pyqt
 
 test:
   imports:
