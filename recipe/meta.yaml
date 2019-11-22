@@ -5,14 +5,15 @@ package:
   version: {{ version }}
 
 source:
-  fn: guidata-{{ version }}.tar.gz
   url: https://github.com/PierreRaybaut/guidata/archive/v{{ version }}.tar.gz
   sha256: 2ffc8e6dd27a57c6ec0e260986368beeddbd2fa5588f5200614b307b27a39e37
   patches:
-   - removed_entry_points.patch
+    - removed_entry_points.patch
+    # The correct imports should come from QtGui
+    - qt_import.patch
 
 build:
-  number: 4
+  number: 5
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
@@ -21,9 +22,11 @@ requirements:
     - python
     - pip
     - pyqt
+    - sip
   run:
     - python
     - pyqt
+    - sip
 
 test:
   imports:
@@ -45,3 +48,4 @@ about:
 extra:
   recipe-maintainers:
     - marcelotrevisani
+    - denivyruck
