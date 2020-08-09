@@ -1,4 +1,4 @@
-{% set version = "1.7.6" %}
+{% set version = "1.7.8" %}
 
 package:
   name: guidata
@@ -6,16 +6,16 @@ package:
 
 source:
   url: https://github.com/PierreRaybaut/guidata/archive/v{{ version }}.tar.gz
-  sha256: 2ffc8e6dd27a57c6ec0e260986368beeddbd2fa5588f5200614b307b27a39e37
+  sha256: 3ad51da3d863fd5d60a859b0c17c2b6396cbf826075e9e45f7a0cbef80305ee9
   patches:
     - removed_entry_points.patch
     # The correct imports should come from QtGui
     - qt_import.patch
 
 build:
-  number: 5
+  number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -37,7 +37,7 @@ about:
   license: CECILL
   license_family: OTHER
   license_file: Licence_CeCILL_V2-en.txt
-  summary: 'Automatic GUI generation for easy dataset editing and display with Python'
+  summary: Automatic GUI generation for easy dataset editing and display with Python
   description: |
     Based on the Qt Python binding module PyQt4, guidata is a Python library
     generating graphical user interfaces for easy dataset editing and display.
