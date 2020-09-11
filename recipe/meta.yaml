@@ -18,9 +18,11 @@ requirements:
     - python
     - pip
     - qtpy >=1.3
+    - pyside
   run:
     - python
     - qtpy >=1.3
+    - pyside
 
 test:
   imports:
