@@ -1,4 +1,4 @@
-{% set version = "1.7.8" %}
+{% set version = "1.7.9" %}
 
 package:
   name: guidata
@@ -6,11 +6,7 @@ package:
 
 source:
   url: https://github.com/PierreRaybaut/guidata/archive/v{{ version }}.tar.gz
-  sha256: 3ad51da3d863fd5d60a859b0c17c2b6396cbf826075e9e45f7a0cbef80305ee9
-  patches:
-    - removed_entry_points.patch
-    # The correct imports should come from QtGui
-    - qt_import.patch
+  sha256: c0ff20c481f634d4d548bd56ae56572187007b26e18ba8692b767a02b7a39c68
 
 build:
   number: 0
@@ -18,19 +14,23 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
+    - qtpy >=1.3
     - pyqt
-    - sip
   run:
     - python
+    - qtpy >=1.3
     - pyqt
-    - sip
 
 test:
   imports:
     - guidata
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/PierreRaybaut/guidata
