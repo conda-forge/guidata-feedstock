@@ -9,7 +9,7 @@ source:
   sha256: c0ff20c481f634d4d548bd56ae56572187007b26e18ba8692b767a02b7a39c68
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -17,11 +17,11 @@ requirements:
   host:
     - python
     - pip
-    - qtpy >=1.3
+    - qtpy >=1.3,<2.0
     - pyqt
   run:
     - python
-    - qtpy >=1.3
+    - qtpy >=1.3,<2.0
     - pyqt
 
 test:
