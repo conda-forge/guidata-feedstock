@@ -1,0 +1,13 @@
+diff --git a/guidata/configtools.py b/guidata/configtools.py
+index 6806ccc..dde8dcd 100644
+--- a/guidata/configtools.py
++++ b/guidata/configtools.py
+@@ -51,7 +51,7 @@ def get_translation(modname, dirname=None):
+             os.environ["LANG"] = lang
+     try:
+         _trans = gettext.translation(
+-            modname, get_module_locale_path(dirname), codeset="utf-8"
++            modname, get_module_locale_path(dirname)
+         )
+         lgettext = _trans.gettext
+ 
