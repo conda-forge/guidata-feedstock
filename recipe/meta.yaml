@@ -1,4 +1,4 @@
-{% set version = "1.7.9" %}
+{% set version = "2.3.0" %}
 
 package:
   name: guidata
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/PierreRaybaut/guidata/archive/v{{ version }}.tar.gz
-  sha256: c0ff20c481f634d4d548bd56ae56572187007b26e18ba8692b767a02b7a39c68
+  sha256: 81fae7e3c086ebc4b11933e731933f66181a45ca8b0adc10ba04aaa5a69cb949
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
