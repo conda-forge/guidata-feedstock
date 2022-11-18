@@ -1,4 +1,4 @@
-{% set version = "2.3.0" %}
+{% set version = "2.3.1" %}
 
 package:
   name: guidata
@@ -6,9 +6,7 @@ package:
 
 source:
   url: https://github.com/PierreRaybaut/guidata/archive/v{{ version }}.tar.gz
-  sha256: 81fae7e3c086ebc4b11933e731933f66181a45ca8b0adc10ba04aaa5a69cb949
-  patches:
-    - remove-codeset.patch
+  sha256: faf9fe42cb6072fd5f7ef45f337a57a30ec36cb81f58257f099abac9735f2351
 
 build:
   number: 0
