@@ -7,8 +7,6 @@ package:
 source:
   url: https://github.com/PierreRaybaut/guidata/archive/v{{ version }}.tar.gz
   sha256: faf9fe42cb6072fd5f7ef45f337a57a30ec36cb81f58257f099abac9735f2351
-  patches:
-    - remove-codeset.patch
 
 build:
   number: 0
