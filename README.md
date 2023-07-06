@@ -1,11 +1,11 @@
-About guidata
-=============
+About guidata-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/guidata-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/PierreRaybaut/guidata
 
 Package license: CECILL-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/guidata-feedstock/blob/main/LICENSE.txt)
 
 Summary: Automatic GUI generation for easy dataset editing and display with Python
 
