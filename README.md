@@ -3,19 +3,20 @@ About guidata-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/guidata-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/PierreRaybaut/guidata
+Home: https://github.com/Codra-Ingenierie-Informatique/guidata
 
-Package license: CECILL-2.0
+Package license: BSD-3-Clause
 
 Summary: Automatic GUI generation for easy dataset editing and display with Python
 
-Development: https://github.com/PierreRaybaut/guidata
+Development: https://github.com/Codra-Ingenierie-Informatique/guidata
 
-Documentation: https://pythonhosted.org/guidata/
+Documentation: https://guidata.readthedocs.io
 
-Based on the Qt Python binding module PyQt4, guidata is a Python library
-generating graphical user interfaces for easy dataset editing and display.
-It also provides helpers and application development tools for PyQt4.
+Based on the Qt library, guidata is a Python library generating
+graphical user interfaces for easy dataset editing and display.
+It also provides helpers and application development tools for Qt
+(PyQt5, PySide2, PyQt6, PySide6).
 
 
 Current build status
