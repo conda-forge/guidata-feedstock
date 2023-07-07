@@ -1,3 +1,4 @@
+{% set name = "guidata" %}
 {% set version = "3.0.0" %}
 
 package:
@@ -33,17 +34,17 @@ test:
     - pip check
 
 about:
-  home: https://github.com/PierreRaybaut/guidata
-  license: CECILL-2.0
-  license_family: OTHER
-  license_file: Licence_CeCILL_V2-en.txt
+  home: https://github.com/Codra-Ingenierie-Informatique/guidata
+  license: BSD-3-Clause
+  license_file: LICENSE
   summary: Automatic GUI generation for easy dataset editing and display with Python
   description: |
-    Based on the Qt Python binding module PyQt4, guidata is a Python library
-    generating graphical user interfaces for easy dataset editing and display.
-    It also provides helpers and application development tools for PyQt4.
-  doc_url: https://pythonhosted.org/guidata/
-  dev_url: https://github.com/PierreRaybaut/guidata
+    Based on the Qt library, guidata is a Python library generating
+    graphical user interfaces for easy dataset editing and display.
+    It also provides helpers and application development tools for Qt
+    (PyQt5, PySide2, PyQt6, PySide6).
+  doc_url: https://guidata.readthedocs.io
+  dev_url: https://github.com/Codra-Ingenierie-Informatique/guidata
 
 extra:
   recipe-maintainers:
