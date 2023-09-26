@@ -3,21 +3,17 @@ About guidata-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/guidata-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/Codra-Ingenierie-Informatique/guidata
+Home: https://github.com/PlotPyStack/guidata
 
 Package license: BSD-3-Clause
 
 Summary: Automatic GUI generation for easy dataset editing and display with Python
 
-Development: https://github.com/Codra-Ingenierie-Informatique/guidata
+Development: https://github.com/PlotPyStack/guidata
 
 Documentation: https://guidata.readthedocs.io
 
-Based on the Qt library, guidata is a Python library generating
-graphical user interfaces for easy dataset editing and display.
-It also provides helpers and application development tools for Qt
-(PyQt5, PySide2, PyQt6, PySide6).
-
+The guidata package is a Python library generating Qt graphical user interfaces. It is part of the PlotPyStack project, aiming at providing a unified framework for creating scientific GUIs with Python and Qt.
 
 Current build status
 ====================
