@@ -36,17 +36,16 @@ test:
     - pip check
 
 about:
-  home: https://github.com/Codra-Ingenierie-Informatique/guidata
+  home: https://github.com/PlotPyStack/guidata
   license: BSD-3-Clause
   license_file: LICENSE
   summary: Automatic GUI generation for easy dataset editing and display with Python
-  description: |
-    Based on the Qt library, guidata is a Python library generating
-    graphical user interfaces for easy dataset editing and display.
-    It also provides helpers and application development tools for Qt
-    (PyQt5, PySide2, PyQt6, PySide6).
+  description:
+    The guidata package is a Python library generating Qt graphical user interfaces.
+    It is part of the PlotPyStack project, aiming at providing a unified framework for
+    creating scientific GUIs with Python and Qt.
   doc_url: https://guidata.readthedocs.io
-  dev_url: https://github.com/Codra-Ingenierie-Informatique/guidata
+  dev_url: https://github.com/PlotPyStack/guidata
 
 extra:
   recipe-maintainers:
