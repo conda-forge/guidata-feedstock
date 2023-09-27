@@ -1,5 +1,5 @@
 {% set name = "guidata" %}
-{% set version = "3.0.4" %}
+{% set version = "3.0.5" %}
 
 package:
   name: guidata
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0eae878c64cf9338174e48af59c1399143b3ad1f5187dc5a30755be18a16e19c
+  sha256: 0b603b5d1d096a72b0a3377944e0183cf0b3c3ab9e0fa572c932da0069fd9259
 
 build:
   number: 0
@@ -36,17 +36,16 @@ test:
     - pip check
 
 about:
-  home: https://github.com/Codra-Ingenierie-Informatique/guidata
+  home: https://github.com/PlotPyStack/guidata
   license: BSD-3-Clause
   license_file: LICENSE
   summary: Automatic GUI generation for easy dataset editing and display with Python
-  description: |
-    Based on the Qt library, guidata is a Python library generating
-    graphical user interfaces for easy dataset editing and display.
-    It also provides helpers and application development tools for Qt
-    (PyQt5, PySide2, PyQt6, PySide6).
+  description:
+    The guidata package is a Python library generating Qt graphical user interfaces.
+    It is part of the PlotPyStack project, aiming at providing a unified framework for
+    creating scientific GUIs with Python and Qt.
   doc_url: https://guidata.readthedocs.io
-  dev_url: https://github.com/Codra-Ingenierie-Informatique/guidata
+  dev_url: https://github.com/PlotPyStack/guidata
 
 extra:
   recipe-maintainers:
