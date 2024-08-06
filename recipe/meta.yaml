@@ -1,5 +1,5 @@
 {% set name = "guidata" %}
-{% set version = "3.6.1" %}
+{% set version = "3.6.2" %}
 
 package:
   name: guidata
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f1934db1f9eaef64159a1c3283a4a69669651aadb472d84d07b98f52284a1436
+  sha256: ff6718d320d53ab38b21736dc06a7b9d997cbb24e39431cb7c02cce3bb2d6997
 
 build:
   number: 0
