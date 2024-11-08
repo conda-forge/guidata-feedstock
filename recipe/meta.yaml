@@ -1,3 +1,4 @@
+{% set python_min = python_min|default("3.9") %}
 {% set name = "guidata" %}
 {% set version = "3.7.1" %}
 
@@ -6,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e0acf1ad52ae9d35d60006e4e1a431c1bb259a96bf80596df6d4a1847375084b
 
 build:
@@ -16,11 +17,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}.*
     - pip
     - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - h5py >=3.0
     - numpy >=1.21
     - qtpy >=1.9
@@ -33,6 +34,7 @@ test:
     - guidata
   requires:
     - pip
+    - python ={{ python_min }}
   commands:
     - pip check
 
