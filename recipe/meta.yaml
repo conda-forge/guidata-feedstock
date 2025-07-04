@@ -1,6 +1,6 @@
 {% set python_min = python_min|default("3.9") %}
 {% set name = "guidata" %}
-{% set version = "3.10.0" %}
+{% set version = "3.11.0" %}
 
 package:
   name: guidata
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7279a3d8970a88ad3d4dc9d02c1feb9afd960a436ae253a5cc8d58f78c15d298
+  sha256: 3c66c65e0b87a2f2050eeebe7a14c5a8567a651f98914efcb470b4d00d220de2
 
 build:
   number: 0
