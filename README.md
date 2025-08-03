@@ -11,7 +11,7 @@ Summary: Automatic GUI generation for easy dataset editing and display with Pyth
 
 Development: https://github.com/PlotPyStack/guidata
 
-Documentation: https://guidata.readthedocs.io
+Documentation: https://guidata.readthedocs.io/
 
 The guidata package is a Python library generating Qt graphical user interfaces. It is part of the PlotPyStack project, aiming at providing a unified framework for creating scientific GUIs with Python and Qt.
 
