@@ -1,27 +1,29 @@
-{% set python_min = python_min|default("3.9") %}
-{% set name = "guidata" %}
-{% set version = "3.12.0" %}
+schema_version: 1
+
+context:
+  name: guidata
+  version: 3.12.0
 
 package:
   name: guidata
-  version: {{ version }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
   sha256: ec9e625abe8be6c43a05f1631dabd15afab2517fbfa1bd62e55ed6b86c1d5ec2
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: ${{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python {{ python_min }}.*
+    - python ${{ python_min }}.*
     - pip
     - setuptools
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - h5py >=3.1
     - numpy >=1.21
     - qtpy >=1.9
@@ -29,23 +31,21 @@ requirements:
     - tomli
     - pyqt
 
-test:
-  imports:
-    - guidata
-  requires:
-    - pip
-    - python {{ python_min }}
-  commands:
-    - pip check
+tests:
+  - python:
+      imports:
+        - guidata
+      python_version: ["${{ python_min }}.*", "3.*"]
+      pip_check: true
 
 about:
-  home: https://github.com/PlotPyStack/guidata
   license: BSD-3-Clause
   license_file: LICENSE
   summary: Automatic GUI generation for easy dataset editing and display with Python
   description: The guidata package is a Python library generating Qt graphical user interfaces. It is part of the PlotPyStack project, aiming at providing a unified framework for creating scientific GUIs with Python and Qt.
-  doc_url: https://guidata.readthedocs.io
-  dev_url: https://github.com/PlotPyStack/guidata
+  homepage: https://github.com/PlotPyStack/guidata
+  repository: https://github.com/PlotPyStack/guidata
+  documentation: https://guidata.readthedocs.io
 
 extra:
   recipe-maintainers:
