@@ -24,8 +24,8 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
-    - h5py >=3.1
-    - numpy >=1.21
+    - h5py >=3.6
+    - numpy >=1.22
     - qtpy >=1.9
     - requests
     - tomli
