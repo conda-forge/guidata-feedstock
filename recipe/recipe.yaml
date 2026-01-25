@@ -29,7 +29,6 @@ requirements:
     - qtpy >=1.9
     - requests
     - tomli
-    - pyqt
 
 tests:
   - python:
