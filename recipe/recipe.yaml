@@ -13,7 +13,7 @@ source:
   sha256: c01b886486be3fa10985c251cb8ebb4f7fb486a835de85c9a39e791a888c3ab9
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -29,7 +29,6 @@ requirements:
     - qtpy >=1.9
     - requests
     - tomli
-    - pyqt
 
 tests:
   - python:
