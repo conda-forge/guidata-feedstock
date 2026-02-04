@@ -41,6 +41,7 @@ tests:
     requirements:
       run:
         - pytest
+        - pyqt
 
 about:
   license: BSD-3-Clause
