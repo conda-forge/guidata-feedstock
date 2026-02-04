@@ -13,7 +13,7 @@ source:
   sha256: c8b7e5d8ddf77dac448d04b928721f3d1982daa9ef1f81da0ae6873e644f418b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -36,6 +36,12 @@ tests:
         - guidata
       python_version: ["${{ python_min }}.*", "3.*"]
       pip_check: true
+  - script:
+      - QT_QPA_PLATFORM=offscreen pytest --collect-only --pyargs guidata.tests
+    requirements:
+      run:
+        - pytest
+        - pyqt
 
 about:
   license: BSD-3-Clause
