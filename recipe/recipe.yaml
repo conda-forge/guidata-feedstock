@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: guidata
-  version: "3.14.3"
+  version: "3.14.4"
 
 package:
   name: guidata
@@ -10,12 +10,18 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 21cc5640584f977c7d929c50d5228c2e3d7d205ca13068cde0535262580fa1cd
+  sha256: 23305322676a14f5e3ddb1cc922a181ad468785bcaa7ab387c3463eaba523c79
 
 build:
   number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
+  python:
+    entry_points:
+      - gtrans = guidata.utils.translations:main
+      - greqs = guidata.utils.genreqs:main
+      - gbuild = guidata.utils.securebuild:main
+      - gclean = guidata.utils.cleanup:main
 
 requirements:
   host:
@@ -34,7 +40,9 @@ tests:
   - python:
       imports:
         - guidata
-      python_version: ["${{ python_min }}.*", "3.*"]
+      python_version:
+        - ${{ python_min }}.*
+        - 3.*
       pip_check: true
   - script:
       - QT_QPA_PLATFORM=offscreen pytest --collect-only --pyargs guidata.tests
