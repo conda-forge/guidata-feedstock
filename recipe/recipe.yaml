@@ -16,6 +16,12 @@ build:
   number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
+  python:
+    entry_points:
+      - gtrans = guidata.utils.translations:main
+      - greqs = guidata.utils.genreqs:main
+      - gbuild = guidata.utils.securebuild:main
+      - gclean = guidata.utils.cleanup:main
 
 requirements:
   host:
@@ -34,7 +40,9 @@ tests:
   - python:
       imports:
         - guidata
-      python_version: ["${{ python_min }}.*", "3.*"]
+      python_version:
+        - ${{ python_min }}.*
+        - 3.*
       pip_check: true
   - script:
       - QT_QPA_PLATFORM=offscreen pytest --collect-only --pyargs guidata.tests
