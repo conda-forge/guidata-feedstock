@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: guidata
-  version: "3.14.4"
+  version: "3.15.0"
 
 package:
   name: guidata
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 23305322676a14f5e3ddb1cc922a181ad468785bcaa7ab387c3463eaba523c79
+  sha256: 2f6546579282c1ee1e30749a4452c4b9ad9fb8a016af5ea630d0c0d2ac347575
 
 build:
   number: 0
