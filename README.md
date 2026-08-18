@@ -46,31 +46,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `guidata` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install guidata
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install guidata
 ```
 
-It is possible to list all of the versions of `guidata` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add guidata
+# for installing globally
+pixi global install guidata
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `guidata` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search guidata --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search guidata --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search guidata --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -82,6 +124,8 @@ mamba repoquery whoneeds guidata --channel conda-forge
 # List dependencies of `guidata`:
 mamba repoquery depends guidata --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
@@ -152,6 +196,5 @@ Feedstock Maintainers
 
 * [@PierreRaybaut](https://github.com/PierreRaybaut/)
 * [@beenje](https://github.com/beenje/)
-* [@denivyruck](https://github.com/denivyruck/)
 * [@marcelotrevisani](https://github.com/marcelotrevisani/)
 
