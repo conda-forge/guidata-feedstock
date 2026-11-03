@@ -34,7 +34,6 @@ requirements:
     - numpy >=1.22
     - qtpy >=1.9
     - requests
-    - tomli
 
 tests:
   - python:
